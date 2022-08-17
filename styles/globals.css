@@ -24,3 +24,59 @@ a {
     background: black;
   }
 }
+
+.header {
+  display: flex;
+  justify-content: left ;
+  align-items: center;
+  height: 80px;
+  border: 1.5px solid #000;
+  padding: 0 50px;
+  background-color: #ccc;
+}
+
+.content {
+}
+
+.menu {
+  display: flex;
+  margin: 0 50px;
+}
+
+.menu a:first-child {
+  margin-right: 25px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.season {
+  margin: 0 50px;
+}
+
+.anime-season-name {
+  margin: 0 10px;
+}
+
+.anime-season-menu {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.img {
+  cursor: pointer;
+  display: flex;
+}
+
+
+.anime-item {
+  background-color: #EEEEEE 	;
+  margin: 5px 10px;
+}
+
+
+
+
