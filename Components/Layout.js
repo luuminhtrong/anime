@@ -1,6 +1,5 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import TestAxios from "./TestAxios";
 
 
 const Layout = ({children}) => {
@@ -8,8 +7,7 @@ const Layout = ({children}) => {
         <div className='content'>
             <Header />
                 {children}
-            {/* <Footer /> */}
-            <TestAxios />
+            <Footer />
         </div>
      );
 }

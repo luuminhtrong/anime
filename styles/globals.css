@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,7 +34,7 @@ a {
   justify-content: left ;
   align-items: center;
   height: 80px;
-  border: 1.5px solid #000;
+  /* border: 1.5px solid #000; */
   padding: 0 50px;
   background-color: #ccc;
 }
@@ -58,6 +62,7 @@ a {
 
 .anime-season-name {
   margin: 0 10px;
+  width: 202px;
 }
 
 .anime-season-menu {
@@ -75,6 +80,50 @@ a {
 .anime-item {
   background-color: #EEEEEE 	;
   margin: 5px 10px;
+}
+
+.anime-title-name {
+  width: 100%;
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+}
+
+
+.scrollpanel-demo .p-scrollpanel p {
+  padding: .5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.scrollpanel-demo .p-scrollpanel.custombar1 .p-scrollpanel-wrapper {
+  border-right: 10px solid var(--surface-b);
+}
+
+.scrollpanel-demo .p-scrollpanel.custombar1 .p-scrollpanel-bar {
+  background-color: var(--primary-color);
+  opacity: 1;
+  transition: background-color .2s;
+}
+
+.scrollpanel-demo .p-scrollpanel.custombar1 .p-scrollpanel-bar:hover {
+  background-color: #007ad9;
+}
+
+.scrollpanel-demo .p-scrollpanel.custombar2 .p-scrollpanel-wrapper {
+  border-right: 10px solid var(--surface-b);
+  border-bottom: 10px solid var(--surface-b);
+}
+
+.scrollpanel-demo .p-scrollpanel.custombar2 .p-scrollpanel-bar {
+  background-color: var(--surface-d);
+  border-radius: 0;
+  opacity: 1;
+  transition: background-color .2s;
+}
+
+.scrollpanel-demo .col-12 {
+  padding: 2rem;
 }
 
 

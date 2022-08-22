@@ -1,26 +1,19 @@
+import { useEffect } from "react";
+import { useDispatch,useSelector } from "react-redux";
 import AnimeFilmsItem from "./AnimeFilmsItem";
+import { getData } from "../redux/seasonSlice";
+
+
 
 const AnimeFilms = () => {
-    return ( 
-        <div class="grid align-items-center">
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
-            <div class="col-4">
-                <AnimeFilmsItem />
-            </div>
+    const allData = useSelector((state) => state.season.allData);
+    return (
+        <div className="grid">
+            {allData.map(data => (
+                <div key={data.mal_id} className="col-4">
+                    <AnimeFilmsItem data={data}/>
+                </div>
+            ))}
         </div>
      );
 }

@@ -1,24 +1,31 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 
-const AnimeFilmsItem = () => {
-    return ( 
-    <div class="grid anime-item">
-        <div class="col-5 img">
+import { ScrollPanel } from 'primereact/scrollpanel';
+
+const AnimeFilmsItem = (data) => {
+    // console.log(data);
+    return (
+        <div className="grid anime-item w-12 ">
+            <div className="col-5 img">
                 <Link href='/details'>
-                    <Image className="img" src='/index.jpeg' width={220} height={220} />
+                    <img className="img" src={data.data.images.jpg.image_url} width={220} height={320} />
                 </Link>
+            </div>
+            <div className="col-7">
+                <ScrollPanel style={{ width: '100%', height: '315px' }} className="custombar1">
+                    <div style={{ lineHeight: '1.5' }}>
+                        <div className="anime-title-name mt-3 white-space-nowrap overflow-hidden text-overflow-ellipsis">
+                            {data.data.title}
+                        </div>  
+                        <p className="anime-studio-name">{data.data.episodes ?  data.data.episodes : "??"} episodes</p>
+                        <p className="anime-episodes mb-2 mt-2">{data.data.source}</p>
+                            {data.data.synopsis}
+                    </div>
+                </ScrollPanel>
+            </div>
         </div>
-        <div class="col-7">
-            <h1>Anime Name</h1>
-            <p className="anime-studio-name">Studio name</p>
-            <p className="anime-episodes">24 episodes x 24mins</p>
-            <p className="anime-desc">
-                Descriptions. Add a crollbar here if the description is long (only scroll the description)
-            </p>
-        </div>
-    </div> 
 );
 }
- 
 export default AnimeFilmsItem;
