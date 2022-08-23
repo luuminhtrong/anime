@@ -5,11 +5,10 @@ import { useSelector } from "react-redux";
 import { ScrollPanel } from 'primereact/scrollpanel';
 
 const AnimeFilmsItem = (data) => {
-    // console.log(data);
     return (
-        <div className="grid anime-item w-12 ">
+        <div className="grid anime-item w-12">
             <div className="col-5 img">
-                <Link href='/details'>
+                <Link href={`/${data.data.mal_id}`}>
                     <img className="img" src={data.data.images.jpg.image_url} width={220} height={320} />
                 </Link>
             </div>

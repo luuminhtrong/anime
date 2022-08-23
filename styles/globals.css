@@ -45,6 +45,7 @@ p {
 .menu {
   display: flex;
   margin: 0 50px;
+  font-size: 22px;
 }
 
 .menu a:first-child {
@@ -63,6 +64,7 @@ p {
 .anime-season-name {
   margin: 0 10px;
   width: 202px;
+  text-align: center;
 }
 
 .anime-season-menu {
@@ -126,6 +128,17 @@ p {
   padding: 2rem;
 }
 
+.search {
+  margin: 25px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.search-wrapper {
+  margin: 0 50px;
+}
 
+.input-size {
+}
 

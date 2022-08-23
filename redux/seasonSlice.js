@@ -24,7 +24,15 @@ const seasonSlice = createSlice({
         return 0;
       });
     },
+    ASC: (state, action) => {
+      state.allData = [...current(state.allData)].sort((a, b) => {
+        if (a[action.payload] > b[action.payload]) return 1;
+        if (a[action.payload] < b[action.payload]) return -1;
+        return 0;
+      });
+    },
   },
+
   extraReducers: {
     [getData.pending]: (state) => {
       state.loading = true;
@@ -42,5 +50,8 @@ const seasonSlice = createSlice({
   },
 });
 
+
+
+export const { ASC, DESC } = seasonSlice.actions;
 const { reducer: seasonReducer } = seasonSlice;
 export default seasonReducer;

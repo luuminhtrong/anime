@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { TabMenu } from 'primereact/tabmenu';
 import { Dropdown } from 'primereact/dropdown';
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/seasonSlice";
+
+import * as season from "../redux/seasonSlice";
 
 const items = [
     {label: 'TV', icon: ''},
@@ -16,12 +18,13 @@ const Anime = () => {
     const [animeYear, setAnimeYear] = useState(2022)
     const [animeSeason, setAnimeSeason] = useState('Summer')
 
-    const seasons = ['Winter', 'Spring', 'Summer', 'Fall']
+    const seasons = ['Winter', 'Spring', 'Summer', 'Fall']  
 
     const dispatch = useDispatch()
     useEffect(()=> {
         dispatch(getData({year: animeYear, seasonal: animeSeason}))
     },[animeYear, animeSeason])
+
 
     function toNextSeason() {
         const currentSeasonIndex = seasons.findIndex((season) => season === animeSeason)
@@ -31,7 +34,6 @@ const Anime = () => {
         } else {
             setAnimeSeason(seasons[currentSeasonIndex+1])
         }
-        // getSeasonAnimeList()
     }
 
     function toPreviousSeason() {
@@ -45,12 +47,35 @@ const Anime = () => {
     }
     
     const [activeIndex, setActiveIndex] = useState();
+    const [sort,setSort] = useState('')
     const citySelectItems = [
-        {label: 'Title (ascending) ', value: 'NY'   },
-        {label: 'Title (descending) ', value: 'RM'},
-        {label: 'Score (ascending) ', value: 'LDN'},
-        {label: 'Score (descending) ', value: 'IST'},
+        {label: 'Title (ascending) ', value: 'ASC-TITLE'   },
+        {label: 'Title (descending) ', value: 'DESC-TITLE'},
+        {label: 'Score (ascending) ', value: 'ASC-SCORE'},
+        {label: 'Score (descending) ', value: 'DESC-SCORE'},
     ];
+
+    const handleChangeSort = (event) => {
+        setSort(event)
+
+        switch (event) {
+            case "ASC-TITLE":
+                dispatch(season.ASC("title"));
+                break;
+            case "DESC-TITLE":
+                dispatch(season.DESC("title"));
+                break;
+            case "ASC-SCORE":
+                dispatch(season.ASC("score"));
+                break;
+            case "DESC-SCORE":
+                dispatch(season.DESC("score"));
+                break;
+            default:
+                break;
+          }
+    }
+
     return ( 
     <div className="mb-3 mt-3 grid align-items-center">
             <div className="col-3">
@@ -68,7 +93,7 @@ const Anime = () => {
                 </div>
             </div>
             <div className="col-2 sizes">
-                <Dropdown  className="p-inputtext-sm border-noround w-16rem"  options={citySelectItems} onChange={(e) => setCity(e.value)} placeholder="Sort by"/>
+                <Dropdown  className="p-inputtext-sm border-noround w-16rem"  options={citySelectItems} onChange={(e) => handleChangeSort(e.target.value)} placeholder={sort ? sort : 'Sort by'}/>
             </div>
     </div>
     );
