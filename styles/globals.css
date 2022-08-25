@@ -73,6 +73,7 @@ p {
 .img {
   cursor: pointer;
   display: flex;
+  max-width: 100%;
 }
 
 
