@@ -6,7 +6,7 @@ import { getData } from '../redux/searchSlice';
 import AnimeFilmsItem from '../Components/AnimeFilmsItem';
 
 
-const search = () => {
+const Search = () => {
     const allData = useSelector((state) => state.search.allData.data);
     const dispatch = useDispatch()
 
@@ -45,4 +45,4 @@ const search = () => {
      );
 }
  
-export default search;
+export default Search;
