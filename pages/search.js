@@ -1,6 +1,5 @@
 import { InputText } from 'primereact/inputtext';
 import { useState } from 'react';
-// import AnimeFilms from '../Components/AnimeFilms';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../redux/searchSlice';
 
@@ -8,12 +7,11 @@ import AnimeFilmsItem from '../Components/AnimeFilmsItem';
 
 
 const search = () => {
-    const dispatch = useDispatch()
     const allData = useSelector((state) => state.search.allData.data);
-
-    // const [dataShow, setDataShow] = useState(allData)
+    const dispatch = useDispatch()
 
     const [value, setValue] = useState('')
+
 
     const handleSubmit = () => {
         dispatch(getData(value))

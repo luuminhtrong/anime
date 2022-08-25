@@ -39,9 +39,6 @@ p {
   background-color: #ccc;
 }
 
-.content {
-}
-
 .menu {
   display: flex;
   margin: 0 50px;
@@ -139,6 +136,61 @@ p {
   margin: 0 50px;
 }
 
-.input-size {
+
+/* Details page */
+
+.anime-detail {
+  margin: 50px 50px 0;
+}
+
+.img-detail {
+  /* width: 300px; */
+  /* height: 300px; */
+  border-radius: 8px;
+}
+
+.rating {
+  margin: 20px 0;
+}
+
+.rating p {
+  font-size: 20px;
+}
+
+.rating-point {
+  display: block;
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.anime-link  p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.anime-link span {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.anime-detail-name {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.anime-detail-english-name {
+  font-size: 35px;
+}
+
+.anime-desc {
+  border-top: 1px solid #000;
+}
+
+.anime-info-table {
+  border: 1.5px solid #000;
+  font-size: 20px;
 }
 

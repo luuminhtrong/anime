@@ -75,6 +75,7 @@ const Anime = () => {
                 break;
           }
     }
+    console.log(activeIndex);
 
     return ( 
     <div className="mb-3 mt-3 grid align-items-center">

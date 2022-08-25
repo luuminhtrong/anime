@@ -9,7 +9,7 @@ const AnimeFilmsItem = (data) => {
         <div className="grid anime-item w-12">
             <div className="col-5 img">
                 <Link href={`/${data.data.mal_id}`}>
-                    <img className="img" src={data.data.images.jpg.image_url} width={220} height={320} />
+                    <img className="img" src={data.data.images.jpg.image_url}/>
                 </Link>
             </div>
             <div className="col-7">
