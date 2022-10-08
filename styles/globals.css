@@ -213,4 +213,51 @@ p {
 }
 
 @media (max-width: 739px) {
+  .anime-title-name {
+    width: 265px;
+  }
+
+  .menu {
+    margin: 0 0;
+  }
+
+  .anime-season_tablet {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: center;
+  }
+
+  .input-mobile{
+    width: 100%;
+  }
+
+  .anime-img-mobile {
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .img {
+    margin-top: 10px;
+  }
+
+  .anime-item {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .anime-info-mobile {
+    padding: 0 10px;
+  }
+
+  .text-center {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }

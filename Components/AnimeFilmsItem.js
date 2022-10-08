@@ -7,12 +7,12 @@ import { ScrollPanel } from "primereact/scrollpanel";
 const AnimeFilmsItem = (data) => {
   return (
     <div className="grid anime-item w-12">
-      <div className="col-5">
+      <div className="xl:col-5 md:col-5 sm:col-12 anime-img-mobile">
         <Link href={`/${data.data.mal_id}`}>
           <img className="img" src={data.data.images.jpg.image_url} />
         </Link>
       </div>
-      <div className="col-7">
+      <div className="xl:col-7 md:col-7 sm:col-12 anime-info-mobile">
         <ScrollPanel
           style={{ width: "100%", height: "240px" }}
           className="custombar1">

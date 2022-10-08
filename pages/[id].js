@@ -37,7 +37,7 @@ const DetailAnime = () => {
   return (
     <div className="anime-detail">
       <div className="grid">
-        <div className="col-4 text-center">
+        <div className="xl:col-4 md:col-6  text-center">
           <img
             className="img-detail"
             src={allData.data.images.jpg.image_url}
@@ -57,9 +57,9 @@ const DetailAnime = () => {
             </Link>
           </div>
         </div>
-        <div className="col-8">
-          <p className="anime-detail-name">{allData.data.title}</p>
-          <p className="anime-detail-english-name">
+        <div className="xl:col-8 md:col-6">
+          <p className="anime-detail-name text-center">{allData.data.title}</p>
+          <p className="anime-detail-english-name text-center">
             {allData.data.title_english} (English name)
           </p>
           <TabView>

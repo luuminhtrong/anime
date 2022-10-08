@@ -95,7 +95,7 @@ const Anime = () => {
             onClick={toNextSeason}></i>
         </div>
       </div>
-      <div className="xl:col-4 md:col-12 sm:col-12">
+      <div className="xl:col-4 md:col-12 sm:col-12 input-mobile">
         <Dropdown
           className="p-inputtext-sm border-noround w-full"
           options={citySelectItems}
