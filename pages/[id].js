@@ -58,8 +58,8 @@ const DetailAnime = () => {
           </div>
         </div>
         <div className="xl:col-8 md:col-6">
-          <p className="anime-detail-name text-center">{allData.data.title}</p>
-          <p className="anime-detail-english-name text-center">
+          <p className="anime-detail-name">{allData.data.title}</p>
+          <p className="anime-detail-english-name">
             {allData.data.title_english} (English name)
           </p>
           <TabView>

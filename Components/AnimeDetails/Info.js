@@ -1,8 +1,8 @@
 const Info = (data) => {
   const animeStudio = [];
   return (
-    <div className="anime-info-table grid mt-1 pd-1">
-      <div className="anime-info-list">
+    <div className="anime-info-table mt-1">
+      <div className="anime-info-list grid">
         <div className="xl:col-3 md:col-6 sm:col-12">
           <div className="anime-info">
             <span className="font-semibold">Format: </span>
@@ -27,14 +27,14 @@ const Info = (data) => {
             {data.data.data.duration}
           </div>
         </div>
-        <div className="xl:col-6 md:col-6 sm:col-12">
+        <div className="xl:col-6">
           <div className="anime-info">
             <span className="font-semibold">Studio: </span>
 
             {data.data.data.studios.map((item) => item.name).join(" ")}
           </div>
         </div>
-        <div className="xl:col-6 md:col-6 sm:col-12">
+        <div className="xl:col-6">
           <div className="anime-info">
             <span className="font-semibold">Tags: </span>
             {data.data.data.genres.map((item) => item.name).join(" ")}
