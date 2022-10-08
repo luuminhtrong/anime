@@ -69,7 +69,7 @@ function Movie(props) {
               <AccordionTab header={item.filename} key={item.id}>
                 <ReactPlayer
                   key={item.id}
-                  url={`https://beta.animethemes.moe/video/HatarakuMaouSama-OP1v2.webm`}
+                  url={item.link}
                   controls={true}
                   width="100%"
                   height="100%"
