@@ -1,11 +1,10 @@
 import Movie from "../Movie";
 import { useSelector } from "react-redux";
 
-const Oped = () => {
-    const allData = useSelector((state) => state.anime.allData);
+const Oped = (props) => {
     return ( 
         <div>
-            <Movie title={allData.data.title}></Movie>
+            <Movie title={props.data.data.title}></Movie>
         </div>
     );
 }

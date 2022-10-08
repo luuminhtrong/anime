@@ -31,9 +31,9 @@ p {
 
 .header {
   display: flex;
-  justify-content: left ;
   align-items: center;
   height: 80px;
+  width: 100%;
   /* border: 1.5px solid #000; */
   padding: 0 50px;
   background-color: #ccc;
@@ -55,6 +55,7 @@ p {
 }
 
 .season {
+  /* overflow: hidden; */
   margin: 0 50px;
 }
 
@@ -76,9 +77,8 @@ p {
   max-width: 100%;
 }
 
-
 .anime-item {
-  background-color: #EEEEEE 	;
+  background-color: #eeeeee;
   margin: 5px 10px;
 }
 
@@ -89,9 +89,8 @@ p {
   font-weight: 700;
 }
 
-
 .scrollpanel-demo .p-scrollpanel p {
-  padding: .5rem;
+  padding: 0.5rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -103,7 +102,7 @@ p {
 .scrollpanel-demo .p-scrollpanel.custombar1 .p-scrollpanel-bar {
   background-color: var(--primary-color);
   opacity: 1;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 .scrollpanel-demo .p-scrollpanel.custombar1 .p-scrollpanel-bar:hover {
@@ -119,7 +118,7 @@ p {
   background-color: var(--surface-d);
   border-radius: 0;
   opacity: 1;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 .scrollpanel-demo .col-12 {
@@ -136,7 +135,6 @@ p {
 .search-wrapper {
   margin: 0 50px;
 }
-
 
 /* Details page */
 
@@ -165,7 +163,7 @@ p {
   font-weight: 600;
 }
 
-.anime-link  p {
+.anime-link p {
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -195,3 +193,24 @@ p {
   font-size: 20px;
 }
 
+/* Responsive */
+
+@media (max-width: 1023px) {
+  /* .season {
+    overflow: hidden;
+  } */
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .anime-season_tablet {
+    display: flex;
+    justify-content: center;
+  }
+
+  .header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 739px) {
+}
