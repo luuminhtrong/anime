@@ -64,7 +64,6 @@ function Movie(props) {
             const item = itemM.videos.reduce((prev, cur) =>
               prev.resolution >= cur.resolution ? prev : cur
             );
-            console.log(item.link);
             return (
               <AccordionTab header={item.filename} key={item.id}>
                 <ReactPlayer

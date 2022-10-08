@@ -24,7 +24,6 @@ const Episode = (data) => {
 
   function openEpSynopsis(index) {
     const correspondingEp = dataEpisodes[index];
-    // console.log(correspondingEp)
     if (!correspondingEp.synopsis) {
       dispatch(getDataSynopsis({ id: id, episodes: correspondingEp.mal_id }));
     }
