@@ -260,4 +260,17 @@ p {
     width: 100%;
     margin-bottom: 10px;
   }
+  
+  .anime-link {
+    width: 320px;
+    overflow: hidden;
+  }
+
+  .anime-desc {
+    padding: 10px 10px;
+  }
+
+  .anime-info-list {
+    padding: 10px 10px;
+  }
 }
