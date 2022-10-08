@@ -4,6 +4,7 @@ import searchReducer from './searchSlice'
 import animeReducer from './animeApi'
 import animeEpisodesReducer from './animeEpisodesSlice'
 import animeSynopsisReducer from './animeSynopsisSlice'
+import themesReducer from './themeSlice'
 
 export const store = configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export const store = configureStore({
     anime: animeReducer,
     episodes: animeEpisodesReducer,
     synopsis: animeSynopsisReducer,
+    themes: themesReducer,
   },
 })

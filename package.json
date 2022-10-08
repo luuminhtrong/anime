@@ -11,8 +11,9 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^0.27.2",
-    "next": "^12.2.5",
+    "next": "^12.3.1",
     "next-redux-wrapper": "^7.0.5",
+    "nextjs-cors": "^2.1.1",
     "primeflex": "^3.2.1",
     "primeicons": "^5.0.0",
     "primereact": "^8.3.0",
