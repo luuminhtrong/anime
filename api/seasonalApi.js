@@ -1,10 +1,10 @@
 import axiosClient from "./axiosClient";
 
 const seasonalApi = {
-  get: (year,season) => {
-    const subUrl = `/seasons/${year}/${season}`;
+  get: (year, season, page) => {
+    const subUrl = `/seasons/${year}/${season}?page=${page}`;
     return axiosClient.get(subUrl);
-  }
+  },
 };
 
 export default seasonalApi;

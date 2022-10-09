@@ -1,25 +1,21 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import searchApi from "../api/searchApi";
 
-export const getData = createAsyncThunk(
-  "search",
-  async ( value ) => {
-    const res = await searchApi.get(value);
-    return res;
-  }
-);
+export const getData = createAsyncThunk("search", async (value) => {
+  const res = await searchApi.get(value);
+  return res;
+});
 
 const searchSlice = createSlice({
   name: "search",
   initialState: {
     allData: {
-      data: []
+      data: [],
     },
     loading: false,
     error: false,
   },
-  reducers: {
-  },
+  reducers: {},
 
   extraReducers: {
     [getData.pending]: (state) => {
@@ -37,7 +33,6 @@ const searchSlice = createSlice({
     },
   },
 });
-
 
 const { reducer: searchReducer } = searchSlice;
 export default searchReducer;

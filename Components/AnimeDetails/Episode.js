@@ -34,11 +34,13 @@ const Episode = (data) => {
       <Accordion
         activeIndex={activeIndex}
         onTabChange={(e) => setActiveIndex(e.index)}
-        onTabOpen={(e) => openEpSynopsis(e.index)}>
+        onTabOpen={(e) => openEpSynopsis(e.index)}
+      >
         {dataEpisodes.map((item) => (
           <AccordionTab
             key={item.mal_id}
-            header={`Episode ${item.mal_id}: ${item.title}`}>
+            header={`Episode ${item.mal_id}: ${item.title}`}
+          >
             {item.synopsis}
           </AccordionTab>
         ))}

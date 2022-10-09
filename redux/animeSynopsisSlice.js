@@ -3,7 +3,7 @@ import animeSynopsis from "../api/animeSynopsis";
 
 export const getDataSynopsis = createAsyncThunk(
   "anmieSynopsis",
-  async ( {id , episodes} ) => {
+  async ({ id, episodes }) => {
     const res = await animeSynopsis.get(id, episodes);
     return res;
   }
@@ -14,14 +14,13 @@ const animeSynopsisSlice = createSlice({
   initialState: {
     allData: {
       data: {
-        synopsis: []
-      }
+        synopsis: [],
+      },
     },
     loading: false,
     error: false,
   },
-  reducers: {
-  },
+  reducers: {},
 
   extraReducers: {
     [getDataSynopsis.pending]: (state) => {
@@ -39,7 +38,6 @@ const animeSynopsisSlice = createSlice({
     },
   },
 });
-
 
 const { reducer: animeSynopsisReducer } = animeSynopsisSlice;
 export default animeSynopsisReducer;

@@ -3,8 +3,8 @@ import seasonalApi from "../api/seasonalApi";
 
 export const getData = createAsyncThunk(
   "season",
-  async ({ year, seasonal }) => {
-    const res = await seasonalApi.get(year, seasonal);
+  async ({ year, seasonal, page }) => {
+    const res = await seasonalApi.get(year, seasonal, page);
     return res.data;
   }
 );
@@ -49,8 +49,6 @@ const seasonSlice = createSlice({
     },
   },
 });
-
-
 
 export const { ASC, DESC } = seasonSlice.actions;
 const { reducer: seasonReducer } = seasonSlice;

@@ -14,8 +14,9 @@ const AnimeFilmsItem = (data) => {
       </div>
       <div className="xl:col-7 md:col-7 sm:col-12 anime-info-mobile">
         <ScrollPanel
-          style={{ width: "100%", height: "240px" }}
-          className="custombar1">
+          style={{ width: "100%", height: "315px" }}
+          className="custombar1"
+        >
           <div style={{ lineHeight: "1.5" }}>
             <div className="anime-title-name white-space-nowrap overflow-hidden text-overflow-ellipsis">
               {data.data.title}

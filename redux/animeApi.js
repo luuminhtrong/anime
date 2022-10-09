@@ -1,33 +1,29 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import animeApi from "../api/animeApi";
 
-export const getData = createAsyncThunk(
-  "anmie",
-  async ( id ) => {
-    const res = await animeApi.get(id);
-    return res;
-  }
-);
+export const getData = createAsyncThunk("anmie", async (id) => {
+  const res = await animeApi.get(id);
+  return res;
+});
 
 const animeSlice = createSlice({
   name: "anime",
   initialState: {
     allData: {
-        data: {
-            images: {
-                jpg: {
-                    image: []
-                }
-            },
-            studios: [],
-            genres: [],
+      data: {
+        images: {
+          jpg: {
+            image: [],
+          },
         },
+        studios: [],
+        genres: [],
+      },
     },
     loading: false,
     error: false,
   },
-  reducers: {
-  },
+  reducers: {},
 
   extraReducers: {
     [getData.pending]: (state) => {
@@ -45,7 +41,6 @@ const animeSlice = createSlice({
     },
   },
 });
-
 
 const { reducer: animeReducer } = animeSlice;
 export default animeReducer;
