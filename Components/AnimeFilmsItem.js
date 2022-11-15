@@ -17,9 +17,11 @@ const AnimeFilmsItem = (data) => {
           style={{ width: "100%", height: "250px" }}
           className="custombar1">
           <div style={{ lineHeight: "1.5" }}>
-            <div className="anime-title-name white-space-nowrap overflow-hidden text-overflow-ellipsis">
-              {data.data.title}
-            </div>
+            <Link href={`/${data.data.mal_id}`}>
+              <p className="anime-title-name white-space-nowrap overflow-hidden text-overflow-ellipsis">
+                {data.data.title}
+              </p>
+            </Link>
             <p className="anime-studio-name">
               {data.data.episodes ? data.data.episodes : "??"} episodes
             </p>

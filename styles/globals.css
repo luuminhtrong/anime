@@ -34,9 +34,7 @@ p {
   align-items: center;
   height: 80px;
   width: 100%;
-  /* border: 1.5px solid #000; */
   padding: 0 50px;
-  /* background-color: #ccc; */
 }
 
 .menu {
@@ -55,7 +53,6 @@ p {
 }
 
 .season {
-  /* overflow: hidden; */
   margin: 0 50px;
 }
 
@@ -78,13 +75,13 @@ p {
 }
 
 .anime-item {
-  /* background-color: #eeeeee; */
   margin: 5px 10px;
 }
 
 .anime-title-name {
   width: 100%;
   font-size: 20px;
+  cursor: pointer;
   /* color: #000; */
   font-weight: 700;
 }
