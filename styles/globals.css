@@ -189,12 +189,11 @@ p {
 }
 
 .anime-info-table {
-  z-index: 1;
+  border: 1.5px solid #000;
   font-size: 20px;
 }
 
 .anime-info-list {
-  z-index: 99;
   padding: 10px 10px;
 }
 
@@ -254,11 +253,9 @@ p {
 
   .img {
     margin-top: 10px;
-    max-height: 100px;
   }
 
   .anime-item {
-    height: 250px;
     margin: auto;
     margin-bottom: 20px;
   }
