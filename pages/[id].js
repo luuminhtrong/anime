@@ -50,7 +50,7 @@ const DetailAnime = () => {
             </span>
             <p>{allData.data.scored_by} ratings</p>
           </div>
-          <div className="anime-link">
+          <div className="anime-link white-space-nowrap overflow-hidden text-overflow-ellipsis">
             <p>Official Website</p>
             <Link href={`${allData.data.url}`}>
               <a>{allData.data.url}</a>

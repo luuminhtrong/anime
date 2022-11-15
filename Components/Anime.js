@@ -87,15 +87,13 @@ const Anime = () => {
           <div className="anime-season flex align-items-center">
             <i
               className="pi pi-chevron-left text-3xl cursor-pointer"
-              onClick={toPreviousSeason}
-            ></i>
+              onClick={toPreviousSeason}></i>
             <div className="anime-season-name text-4xl">
               {animeSeason} {animeYear}
             </div>
             <i
               className="pi pi-chevron-right text-3xl cursor-pointer"
-              onClick={toNextSeason}
-            ></i>
+              onClick={toNextSeason}></i>
           </div>
         </div>
         <div className="xl:col-4 md:col-12 sm:col-12 input-mobile">
@@ -108,7 +106,7 @@ const Anime = () => {
         </div>
       </div>
       <AnimeFilms />
-      <Pagination year={animeYear} season={animeSeason}></Pagination>
+      {/* <Pagination year={animeYear} season={animeSeason}></Pagination> */}
     </>
   );
 };
